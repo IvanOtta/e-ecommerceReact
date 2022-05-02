@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    width: 100%;
+    background: #bc4e9c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px;
+    list-style: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+ul{
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+}
+
+ul li a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+ul li a:hover{
+    color: orange;
+}
+
+.carrito{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.bienvenida{
+    display: flex;
+    justify-content: center;
+}
