@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -17,7 +18,8 @@ ul li{
     display: inline-block;
     padding: 10px;
     list-style: none;
-    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
 }
 
 ul{
@@ -45,4 +47,5 @@ ul li a:hover{
 .bienvenida{
     display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
