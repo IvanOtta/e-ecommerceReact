@@ -10,7 +10,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
     }
     function contadorR() {
         if (cantidad > 1) {
-            setCantidad(cantidad - 1)
+            setCantidad(cantidad - initial)
         }
     }
 
