@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
+
 }
 
-header{
+header {
     width: 100%;
-    background: #bc4e9c;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #f80759, #bc4e9c);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #f80759, #bc4e9c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f80759, #bc4e9c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f80759, #bc4e9c);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
-ul li{
+ul li {
     display: inline-block;
     padding: 10px;
     list-style: none;
@@ -22,30 +26,95 @@ ul li{
     font-weight: 200;
 }
 
-ul{
+ul {
     display: flex;
     justify-content: right;
     padding: 15px;
 }
 
-ul li a{
+ul li a {
     display: flex;
     text-decoration: none;
     color: white;
     transition: all 0.5s;
 }
 
-ul li a:hover{
+ul li a:hover {
     color: orange;
 }
 
-.carrito{
+.carrito {
     font-size: 2rem;
     color: #fff;
+    cursor: pointer;
 }
 
-.bienvenida{
+.carrito:hover {
+    color: rgb(115, 255, 115);
+}
+
+.bienvenida {
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
+}
+
+.boton {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+}
+
+.boton h3{
+    padding: 10px ;
+}
+
+.botonS {
+    padding: 5px;
+    padding-right: 12px;
+    padding-left: 12px;
+    background-color: rgb(92, 233, 92);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.botonS:hover{
+    background-color: rgb(55, 197, 55);
+}
+
+.botonR {
+    padding: 5px;
+    padding-right: 12px;
+    padding-left: 12px;
+    background-color: rgb(255, 32, 32);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.botonR:hover{
+    background-color: rgb(218, 27, 27);
+}
+
+.btnAddProductos {
+    padding: 5px;
+    background: #0575E6;
+    background: -webkit-linear-gradient(to left, #021B79, #0575E6);
+    background: linear-gradient(to left, #021B79, #0575E6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 1s !important;
+}
+.btnAddProductos:hover{
+    background: -webkit-linear-gradient(to left, #284bc9, #287bcf);
+    background: linear-gradient(to left, #1b3cb6, #3b94ec);
+}
+
+.stock p{
+    display: flex;
+    justify-content: center;
 }
