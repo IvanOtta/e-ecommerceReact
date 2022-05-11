@@ -118,3 +118,41 @@ ul li a:hover {
     display: flex;
     justify-content: center;
 }
+
+.card-container{
+    background-color: #cc3541;
+    padding: 20px;
+    margin: 10px;
+    width: 370px;
+    box-shadow: 5px  11px 5px rgb(58, 56, 56) ;
+}
+.prod-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.prod-name{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 2rem;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.prod-price {
+    font-family:sans-serif;
+    color: #48d61d;
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    margin: 5px auto ;
+    border: solid 4px rgb(221, 224, 28);
+    border-radius: 30px;
+    padding: 20px;
+}
+.prod-image {
+    width: 350px;
+    padding: 10px;
+    border-radius: 20px;
+}
