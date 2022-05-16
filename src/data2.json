@@ -1,0 +1,22 @@
+[
+    { "id": "1", "name": "Air Jordan Retro Low Smoke Grey", "stock": "10", "price": "$53.545", "image": "../componentes/images/4-lowsmokegrey.jpeg", "description": "Modelo Air Jordan Retro Low Smoke Grey"
+    },
+    { "id": "2", "name": "Air Jordan 1 Low Black Court Purple", "stock": "6", "price": "$52.500", "image": "../componentes/images/28-lowblackcourtpurple.jpeg", "description": "Modelo Air Jordan 1 Low Black Court Purple"
+    },
+    { "id": "3", "name": "Air Jordan 1 Low White Gym Red", "stock": "8", "price": "$46.200", "image": "../componentes/images/30-lowwhitegymred.jpeg", "description": "Modelo Air Jordan 1 Low White Gym Red "
+    },
+    { "id": "4", "name": "Air Jordan 4 Retro Royalty", "stock": "7", "price": "$112.337", "image": "../componentes/images/72-j4royalty.jpeg", "description": "Modelo Air Jordan 4 Retro Royalty"
+    },
+    { "id": "5", "name": "Air Jordan Retro 11 High Bred", "stock": "1", "price": "$69.292", "image": "../componentes/images/88-j11highbred.jpeg", "description": "Modelo Air Jordan Retro 11 High Bred"
+    },
+    { "id": "6", "name": "Air Jordan 14 Last Shot", "stock": "2", "price " :  "$75.591", "image": "../componentes/images/93-j14lastshot.jpeg", "description": "Modelo "
+    },
+    { "id": "7", "name": "Air Jordan Retro 1 Low Black White Grey", "stock": "3", "price" : "$46.200", "image": "../componentes/images/95-lowblackwhitegrey.jpeg", "description": "Modelo Air Jordan 14 Last Shot"
+    },
+    { "id": "8", "name": "Air Jordan Retro 1 Low Black Toe", "stock": "4", "price" : "$57.750", "image": "../componentes/images/102-lowblacktoe.jpeg", "description": "Modelo Air Jordan Retro 1 Low Black Toe"
+    },
+    { "id": "9", "name": "Air Jordan 1 Low Wolf Grey", "stock": "2", "price" : "$60.893", "image": "../componentes/images/141-lowwolfgrey.jpeg", "description": "Modelo Air Jordan 1 Low Wolf Grey"
+    },
+    { "id": "10", "name": "Air Jordan 1 Mid Very Berry", "stock": "5", "price" : "$46.200", "image": "../componentes/images/165-midveryberry.jpeg", "description": "Modelo Air Jordan 1 Mid Very Berry"
+    }
+]
