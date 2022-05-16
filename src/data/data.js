@@ -32,4 +32,13 @@ export const getFetch = new Promise((resolve) => {
     },2000)
 })
 
+// export const getFetch = (id) => {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             const query = id ? productos.find(producto => producto.id === id) : productos
+//             resolve(query)
+//         },2000)
+//     })
+// }
+
 export default productos

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import productos from '../data/data'
-// import ItemList from './ItemList'
+import ItemList from './ItemList'
 import { Ring } from '@uiball/loaders'
 import ItemDetail from './ItemDetail'
 
@@ -36,7 +36,7 @@ function ItemListContainer({ greeting }) {
     return (
         <div className="bienvenida" >
             <p>{greeting}</p>
-            {loading ? (<Ring color= {"red"}/>) : (<ItemDetail productos= {productos} />)}
+            {loading ? (<Ring color= {"red"}/>) : (<ItemList productos= {productos} />)}
         </div>
     )
 }
