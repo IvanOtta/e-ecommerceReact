@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getFetch } from "../data/data";
+import { getData } from "../data/data";
 import ItemDetail from "./ItemDetail";
 import { Ring } from '@uiball/loaders'
+import {useParams} from 'react-router-dom'
 <Ring
     size={40}
     lineWeight={5}
@@ -11,17 +12,19 @@ import { Ring } from '@uiball/loaders'
 
 
 function ItemDetailContainer() {
-  const [producto, setProduct] = useState({});
   const  [loading, setLoading] = useState(true)
+  const [producto, setProduct] = useState({});
+  const {id} = useParams()
 
   useEffect(() => {
-    getFetch
-    .then((res) => setProduct(res))
-    .catch((err) => console.log(err))
-    .finally(() => {
-      setLoading(false)
-    })
+    getData(id)  
+      .then(res=> setProduct(res))
+      .catch((err)=> console.log(err))
+      .finally(()=>setLoading(false))
   }, []);
+
+  console.log(id)
+  console.log(producto)
 
   return (
     <div>
