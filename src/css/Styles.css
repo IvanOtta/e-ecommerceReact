@@ -32,18 +32,48 @@ ul li {
 
 ul {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     padding: 15px;
 }
 
-ul li a {
+.link-home {
     display: flex;
     text-decoration: none;
     color: white;
     transition: all 0.5s;
 }
 
-ul li a:hover {
+.link-home:hover {
+    color: orange;
+}
+.link-home {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.link-zapatillas:hover {
+    color: orange;
+}
+.link-zapatillas {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.link-ropa:hover {
+    color: orange;
+}
+.link-ropa {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+}
+
+.link-home:hover {
     color: orange;
 }
 
@@ -215,6 +245,11 @@ ul li a:hover {
     stroke-linecap: round;
     animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
   }
+  .loader2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
   
   @keyframes rotate {
     100% {
@@ -262,3 +297,53 @@ ul li a:hover {
     display: flex;
     justify-content: center;
 }
+
+/* ItemList */
+
+.itemList{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 90%; */
+}
+
+
+/* DetailInfo */
+
+.itemDetailContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px;
+    width: 100%;
+    background-color: #ADB5BD;
+}
+
+.detailImage img{
+    width: 500px;
+    border-radius: 10px;
+    
+}
+
+.detailInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212529;
+    border-radius: 20px;
+    box-shadow: 1px 3px 12px 4px red;
+}
+.detailInfo h2{
+    color: #fff;
+    font-size: 2rem;
+    font-family:sans-serif;
+    letter-spacing: 2px;
+    padding: 20px; 
+}
+.detailInfo p{
+    font-size: 2rem;
+    color: rgb(80, 212, 80);
+}
+

@@ -15,7 +15,7 @@ function Item({ name, image, stock, id }) {
         {/* <h3 className="prod-price"> {price} </h3>
        <ItemCount stock={stock} initial={1} onAdd={(cantidad) => console.log(`${cantidad} Productos Agregados`)} /> */}
        <Link to= {`/detalle/${id}`} >
-        <Button variant="outline-info">Ver Detalle</Button>{" "}
+        <Button variant="outline-info">Ver Detalle</Button>
     </Link>
       </div>
     </div>

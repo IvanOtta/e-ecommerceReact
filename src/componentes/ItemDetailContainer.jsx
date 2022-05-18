@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
 import { getData } from "../data/data";
 import ItemDetail from "./ItemDetail";
-import { Ring } from '@uiball/loaders'
 import {useParams} from 'react-router-dom'
-<Ring
-    size={40}
-    lineWeight={5}
-    // speed={1}
-    // color="black"
-/>
+import Loader2 from'./Loader2'
+
 
 
 function ItemDetailContainer() {
@@ -28,7 +23,7 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      {loading ? (<Ring color= {"red"}/>) : (<ItemDetail producto= {producto} />)}
+      {loading ? (<Loader2/>) : (<ItemDetail producto= {producto} />)}
     </div>
   );
 }

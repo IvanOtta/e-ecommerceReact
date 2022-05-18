@@ -3,6 +3,7 @@ import productos from '../data/data'
 import ItemList from './ItemList'
 import { Ring } from '@uiball/loaders'
 import ItemDetail from './ItemDetail'
+import { useParams } from 'react-router-dom'
 
 <Ring
     size={40}
@@ -24,15 +25,23 @@ function ItemListContainer({ greeting }) {
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
+    const {id} = useParams()
 
     useEffect(() => {
-        items
-            .then(resp => {
-                setProductos(resp)
-            })
-            .finally(() => setLoading(false))
-    }, [])
+        if (id) {
+            items
+                .then(resp => setProductos(resp.filter((prods) => prods.categoria === id)))
+                .catch((err) => console.log(err))
+                .finally(() => setLoading(false))
+        } else {
+            items
+                .then(resp => setProductos(resp))
+                .catch((err) => console.log(err))
+                .finally(() => setLoading(false)) 
+        }
+    }, [id])
 
+    console.log(id)
     return (
         <div className="bienvenida" >
             <p>{greeting}</p>
