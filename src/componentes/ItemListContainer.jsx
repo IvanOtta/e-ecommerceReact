@@ -33,7 +33,8 @@ function ItemListContainer({ greeting }) {
                 .then(resp => setProductos(resp.filter((prods) => prods.categoria === id)))
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
-        } else {
+        } 
+        else{
             items
                 .then(resp => setProductos(resp))
                 .catch((err) => console.log(err))

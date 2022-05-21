@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function ItemCount({ stock, initial, onAdd }) {
+export default function ItemCount({ stock, initial, onAdd, handleInput }) {
     const [cantidad, setCantidad] = useState(initial)
 
     function contadorS() {
@@ -14,8 +14,9 @@ export default function ItemCount({ stock, initial, onAdd }) {
         }
     }
 
-    function agregadoAlCarrito() {
+    function addToCart() {
         onAdd(cantidad)
+        handleInput()
     }
 
 
@@ -23,10 +24,10 @@ export default function ItemCount({ stock, initial, onAdd }) {
     return (
         <div>
             <div className="boton" > 
-                <button className="botonS" onClick={contadorS} > + </button>
-                <h2> {cantidad} </h2>
                 <button className="botonR" onClick={contadorR} > - </button>
-                <button className="btnAddProductos" onClick={agregadoAlCarrito} >Agregar Producto</button>
+                <h2> {cantidad} </h2>
+                <button className="botonS" onClick={contadorS} > + </button>
+                <button className="btnAddProductos" onClick={addToCart} >Agregar Producto</button>
             </div>
         </div>
 

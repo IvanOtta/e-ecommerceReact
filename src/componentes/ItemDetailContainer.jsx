@@ -16,7 +16,7 @@ function ItemDetailContainer() {
       .then(res=> setProduct(res))
       .catch((err)=> console.log(err))
       .finally(()=>setLoading(false))
-  }, []);
+  }, [id]);
 
   console.log(id)
   console.log(producto)

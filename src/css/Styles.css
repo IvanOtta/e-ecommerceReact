@@ -28,6 +28,7 @@ ul li {
     list-style: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
+    font-size: 1.3rem;
 }
 
 ul {
@@ -303,10 +304,6 @@ ul {
 .itemList{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 90%; */
 }
 
 
