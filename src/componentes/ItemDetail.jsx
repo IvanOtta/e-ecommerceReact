@@ -3,14 +3,25 @@ import { Button, Card } from "react-bootstrap";
 import Item from "./Item";
 import { useState } from "react";
 import Navigator from "./Navigator";
+import { useCartContext } from "../Context/cartContext";
+
 
 
 export default function ItemDetail({ producto }) {
   const [inputType, setInputType] = useState("button");
+  
+  const {addToCart} = useCartContext()
 
+  
   const handleInput = () => {
     setInputType("input");
   };
+
+
+  function onAdd(cant) {
+    addToCart({...producto, cant})
+    console.log(`${cant} Productos agregados`)
+  }
 
   return (
     <div className="itemDetailContainer">
@@ -21,7 +32,7 @@ export default function ItemDetail({ producto }) {
         <h2> {producto.name} </h2>
         <p> {producto.price} </p>
         {
-          inputType === 'button' ? <ItemCount stock={5} initial={1} onAdd={(cantidad) => console.log(`${cantidad} Productos Agregados`)} handleInput={handleInput}/>
+          inputType === 'button' ? <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} handleInput={handleInput}/>
           :
           <Navigator/>          
           

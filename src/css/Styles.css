@@ -78,6 +78,15 @@ ul {
     color: orange;
 }
 
+.link-cart{
+    color: #fff;
+    transition: all 1s;
+}
+
+.link-cart:hover{
+    color: orange;
+}
+
 .carrito {
     font-size: 2rem;
     color: #fff;
@@ -302,8 +311,10 @@ ul {
 /* ItemList */
 
 .itemList{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 

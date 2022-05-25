@@ -1,0 +1,53 @@
+
+.cartTitle{
+    display: flex;
+    justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.cartItem{
+    list-style: none;
+    padding: 20px;
+    /* width: 500px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.trash{
+    font-size: 1.3rem;
+}
+
+.trash:hover{
+    color: #d62323;
+    cursor: pointer;
+}
+
+.total-delete-btn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.totalprice{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.price{
+    color: rgb(43, 221, 43);
+    
+}
+.carritoVacio{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backToHome{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom:500px;
+    text-decoration: none;
+}
