@@ -7,6 +7,7 @@ export const useCartContext = () => useContext(CartContext)
 
 export default function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
+    const [totalItems, setTotalItems] = useState(0)
 
     function isInCart(id) {
         return cartList.some(el => el.id === id)
@@ -30,12 +31,17 @@ export default function CartContextProvider({children}) {
     }
 
     const clearItem = (id) => {
-        const newCart = [...cartList];
-        let index = newCart.findIndex((product) => product.id ===id);
-        newCart.splice(index,1);
-
+        const newCart = [...cartList]
+        let index = newCart.filter(item => item.id === id)
+        newCart.splice(index, 1)
         setCartList([...newCart])
     }
+
+    const cantidadTotal = () => {
+        return cartList.reduce((counter, prod) => counter += prod.cant, 0)
+    }
+
+
     
     
 
@@ -44,7 +50,8 @@ export default function CartContextProvider({children}) {
             cartList,
             addToCart,
             clearCart,
-            clearItem
+            clearItem,
+            cantidadTotal
         }}>    
             {children}
         </CartContext.Provider>

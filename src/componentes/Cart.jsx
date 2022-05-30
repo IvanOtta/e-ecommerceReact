@@ -9,7 +9,7 @@ export default function Cart() {
   const { cartList, clearCart, clearItem } = useCartContext();
 
   const precioTotal = cartList.reduce(
-    (acc, item) => acc + parseFloat(item.price) * item.cant,
+    (acc, item) => acc + (item.price) * item.cant,
     0
   );
   return (
