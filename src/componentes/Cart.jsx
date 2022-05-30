@@ -6,12 +6,9 @@ import {RiArrowGoBackFill} from 'react-icons/ri'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Cart() {
-  const { cartList, clearCart, clearItem } = useCartContext();
+  const { cartList, clearCart, clearItem, precioTotal } = useCartContext();
 
-  const precioTotal = cartList.reduce(
-    (acc, item) => acc + (item.price) * item.cant,
-    0
-  );
+  
   return (
     <div className="cart-container">
       <div className="cart">

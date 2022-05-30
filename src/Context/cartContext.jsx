@@ -40,7 +40,10 @@ export default function CartContextProvider({children}) {
     const cantidadTotal = () => {
         return cartList.reduce((counter, prod) => counter += prod.cant, 0)
     }
-
+    const precioTotal = cartList.reduce(
+        (acc, item) => acc + (item.price) * item.cant,
+        0
+      );
 
     
     
@@ -51,7 +54,8 @@ export default function CartContextProvider({children}) {
             addToCart,
             clearCart,
             clearItem,
-            cantidadTotal
+            cantidadTotal,
+            precioTotal
         }}>    
             {children}
         </CartContext.Provider>
