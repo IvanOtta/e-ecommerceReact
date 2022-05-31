@@ -32,7 +32,7 @@ function NavBar() {
           </span>
         </Link>
           <span className="cantidad-prod" >
-            {cantidadTotal()}
+            {cantidadTotal() !== 0 && cantidadTotal()}
           </span>
 
           </div>
