@@ -7,7 +7,6 @@ export const useCartContext = () => useContext(CartContext)
 
 export default function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
-    const [totalItems, setTotalItems] = useState(0)
 
     function isInCart(id) {
         return cartList.some(el => el.id === id)
@@ -41,7 +40,7 @@ export default function CartContextProvider({children}) {
         return cartList.reduce((counter, prod) => counter += prod.cant, 0)
     }
     const precioTotal = cartList.reduce(
-        (acc, item) => acc + (item.price) * item.cant,
+        (acc, item) => acc + parseFloat(item.price) * item.cant,
         0
       );
 
