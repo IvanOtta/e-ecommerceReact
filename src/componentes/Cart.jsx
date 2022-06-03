@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../Context/cartContext";
-import "../css/cart.css";
 import {BsFillTrashFill} from 'react-icons/bs'
 import {RiArrowGoBackFill} from 'react-icons/ri'
 import {CgDanger} from 'react-icons/cg'
+import "../css/cart.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Cart() {
@@ -12,7 +12,7 @@ export default function Cart() {
   
   return (
     <div className="cart-container">
-      {cartList.length === 0 ? "" : <h2 className="cartTitle"> Finalizá tu Compra </h2> }
+      {cartList.length === 0 ? '' : <h2 className="cartTitle"> Finalizá tu Compra </h2>  }
       <div className="cart">
             {cartList.map((product) => (
           <li className="cartItem">
@@ -31,6 +31,9 @@ export default function Cart() {
             <button className="delete-button btn btn-outline-danger" onClick={clearCart}>
               Vaciar Carrito
             </button>
+          <Link to={'/'} >
+            <button className="btn btn-outline-info">Seguir Comprando</button>
+          </Link>
 
           <button className="btn btn-outline-success">
             Realizar Compra

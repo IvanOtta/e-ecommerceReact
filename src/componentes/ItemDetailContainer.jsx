@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getData } from "../data/data";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import Loader2 from "./Loader2";
@@ -20,21 +19,7 @@ function ItemDetailContainer() {
     .finally(() => setLoading(false))
    
 
-  }, [])
-
-  
-
-  console.log(producto);
-
-  // useEffect(() => {
-  //   getData(id)
-  //     .then(res=> setProduct(res))
-  //     .catch((err)=> console.log(err))
-  //     .finally(()=>setLoading(false))
-  // }, [id]);
-
-  console.log(id);
-  console.log(producto);
+  }, [id])
 
   return (
     <div>{loading ? <Loader2 /> : <ItemDetail producto={producto} />}</div>

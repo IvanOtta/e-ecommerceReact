@@ -164,13 +164,4 @@ export const getData = (id) => {
   });
 };
 
-
-// const object = productos[0]
-// console.log(object)
-
-// export const getFetch = new Promise((resolve) => {
-//     setTimeout(() => {
-//         resolve(object)
-//     },2000)
-// })
 export default productos;

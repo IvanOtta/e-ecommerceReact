@@ -20,7 +20,6 @@ export default function ItemDetail({ producto }) {
 
   function onAdd(cant) {
     addToCart({...producto, cant})
-    console.log(`${cant} Productos agregados`)
   }
 
   return (

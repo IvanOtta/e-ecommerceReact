@@ -8,21 +8,20 @@ export const useCartContext = () => useContext(CartContext)
 export default function CartContextProvider({children}) {
     const [cartList, setCartList] = useState([])
 
-    function isInCart(id) {
-        return cartList.some(el => el.id === id)
-    }
+    function addToCart(item) { 
+        let i = cartList.findIndex(prod => prod.id === item.id);
 
-    function addToCart(item) {
-        if(isInCart(item.id)) {
-            let i = cartList.findIndex(el => el.id === item.id);
-            const newCartList = cartList;
-            newCartList[i].cantidad += item.cantidad
-            setCartList(newCartList)
+        if (i !== -1) {
+ 
+            const quant1 = cartList[i].cant;
+
+            cartList[i].cant = quant1 + item.cant;
+
+            setCartList([...cartList])
         } else {
-            setCartList([
-                ...cartList,
-                item]);
-        }
+
+        setCartList([...cartList, item])  }   
+            
     }
 
     function clearCart() {
