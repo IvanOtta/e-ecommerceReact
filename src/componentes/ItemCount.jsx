@@ -1,21 +1,21 @@
 import { useState } from "react";
 
 export default function ItemCount({ stock, initial, onAdd, handleInput }) {
-    const [cantidad, setCantidad] = useState(initial)
+    const [quantity, setQuantity] = useState(initial)
 
     function contadorS() {
-        if (cantidad < stock) {
-            setCantidad(cantidad + 1)
+        if (quantity < stock) {
+            setQuantity(quantity + 1)
         }
     }
     function contadorR() {
-        if (cantidad > 1) {
-            setCantidad(cantidad - initial)
+        if (quantity > 1) {
+            setQuantity(quantity - initial)
         }
     }
 
     function addToCart() {
-        onAdd(cantidad)
+        onAdd(quantity)
         handleInput()
     }
 
@@ -25,7 +25,7 @@ export default function ItemCount({ stock, initial, onAdd, handleInput }) {
         <div>
             <div className="boton" > 
                 <button className="botonR" onClick={contadorR} > - </button>
-                <h2> {cantidad} </h2>
+                <h2> {quantity} </h2>
                 <button className="botonS" onClick={contadorS} > + </button>
                 <button className="btnAddProductos" onClick={addToCart} >Agregar Producto</button>
             </div>

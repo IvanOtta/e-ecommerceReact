@@ -5,8 +5,8 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Cart from "./componentes/Cart";
 import CartContextProvider from "./Context/cartContext";
+import Form from "./componentes/Form";
 import "./css/Styles.css";
-import Formulario from "./componentes/Formulario";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
             <Route path="/detalle/:id" element={<ItemDetailContainer />} />
             <Route path="/*" element={<Navigate to="/" replace />} />
             <Route path="/cart" element={<Cart />} />
-            <Route path="/contacto" element={ <Formulario/> } />
+            <Route path="/Comprar" element={ <Form/> } />
           </Routes>
         </div>
       </CartContextProvider>
