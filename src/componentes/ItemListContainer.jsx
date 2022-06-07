@@ -10,7 +10,7 @@ import {getFirestore, collection, getDocs,} from "firebase/firestore";
 />;
 
 function ItemListContainer({ greeting }) {
-  const [productos, setProductos] = useState([]);
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
@@ -22,12 +22,12 @@ function ItemListContainer({ greeting }) {
  
       if (id) {
        getDocs(QueryCollection)
-         .then(resp =>   setProductos((resp.docs.map(item => ({ id: item.id, ...item.data()}) )).filter((prods)=> prods.categoria === id)))
+         .then(resp =>   setProducts((resp.docs.map(item => ({ id: item.id, ...item.data()}) )).filter((prods)=> prods.categoria === id)))
          .catch((err)=>console.log(err))
          .finally(() => setLoading(false))
        } else {
          getDocs(QueryCollection)
-         .then(resp => setProductos(resp.docs.map(item => ({ id: item.id, ...item.data()}) )))  
+         .then(resp => setProducts(resp.docs.map(item => ({ id: item.id, ...item.data()}) )))  
          .catch((err)=>console.log(err))
          .finally(() => setLoading(false))
        }
@@ -35,10 +35,12 @@ function ItemListContainer({ greeting }) {
  
   }, [id])
 
+  
+
   return (
     <div className="bienvenida">
       <p>{greeting}</p>
-      {loading ? <Ring color={"red"} /> : <ItemList productos={productos} />}
+      {loading ? <Ring color={"red"} /> : <ItemList products={products} />}
     </div>
   );
 }

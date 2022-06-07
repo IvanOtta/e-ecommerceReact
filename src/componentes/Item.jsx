@@ -13,7 +13,7 @@ function Item({ name, image, stock, id }) {
           <p>Stock del producto: </p> <span> {stock} </span>
         </div>
        <Link to= {`/detalle/${id}`} >
-        <Button variant="outline-info">Ver Detalle</Button>
+        <Button title="Ver Producto" variant="outline-info">Ver Detalle</Button>
     </Link>
       </div>
     </div>
