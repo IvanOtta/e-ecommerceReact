@@ -3,13 +3,11 @@ import { useCartContext } from "../Context/cartContext";
 import {BsFillTrashFill} from 'react-icons/bs'
 import {RiArrowGoBackFill} from 'react-icons/ri'
 import {CgDanger} from 'react-icons/cg'
-import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from "firebase/firestore";
-import { useState } from "react";
 import "../css/cart.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Cart() {
-  const { cartList, clearCart, clearItem, precioTotal } = useCartContext();
+  const { cartList, clearCart, clearItem, precioTotal, aumentarCantidad } = useCartContext();
   
   return (
     <div className="cart-container">
@@ -23,6 +21,7 @@ export default function Cart() {
             <p> {product.name} </p>
             <p> Precio: ${product.price} </p>
             <p> Cantidad: {product.cant} </p>
+            <span onClick={() => aumentarCantidad }> + </span>
                <span onClick={() => clearItem(product.id)} > <BsFillTrashFill className="trash"/> </span> 
           </li>
          ))}

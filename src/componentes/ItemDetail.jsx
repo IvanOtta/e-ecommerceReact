@@ -1,6 +1,4 @@
 import ItemCount from "./ItemCount";
-import { Button, Card } from "react-bootstrap";
-import Item from "./Item";
 import { useState } from "react";
 import Navigator from "./Navigator";
 import { useCartContext } from "../Context/cartContext";
