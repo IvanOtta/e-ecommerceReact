@@ -21,7 +21,7 @@ function ItemListContainer({ greeting }) {
  
  
       if (id) {
-       getDocs(QueryCollection)
+         getDocs(QueryCollection)
          .then(resp =>   setProducts((resp.docs.map(item => ({ id: item.id, ...item.data()}) )).filter((prods)=> prods.categoria === id)))
          .catch((err)=>console.log(err))
          .finally(() => setLoading(false))
