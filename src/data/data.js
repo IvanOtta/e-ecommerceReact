@@ -18,7 +18,7 @@ const products = [
   {
     id: "1",
     name: "Air Jordan Retro Low Smoke Grey",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 10,
     price: '53.545',
     image: '../componentes/images/4-lowsmokegrey.jpeg',
@@ -27,7 +27,7 @@ const products = [
   {
     id: "2",
     name: "Air Jordan 1 Low Black Court Purple",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 6,
     price: '52.500',
     image: '../componentes/images/28-lowblackcourtpurple.jpeg',
@@ -36,7 +36,7 @@ const products = [
   {
     id: "3",
     name: "Air Jordan 1 Low White Gym Red",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 8,
     price: '46.200',
     image: '../componentes/images/30-lowwhitegymred.jpeg',
@@ -45,7 +45,7 @@ const products = [
   {
     id: "4",
     name: "Air Jordan 4 Retro Royalty",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 7,
     price: '112.337',
     image: '../componentes/images/72-j4royalty.jpeg',
@@ -54,7 +54,7 @@ const products = [
   {
     id: "5",
     name: "Air Jordan Retro 11 High Bred",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 1,
     price: '69.292',
     image: '../componentes/images/88-j11highbred.jpeg',
@@ -63,7 +63,7 @@ const products = [
   {
     id: "6",
     name: "Air Jordan 14 Last Shot",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 2,
     price: '75.591',
     image: '../componentes/images/93-j14lastshot.jpeg',
@@ -72,7 +72,7 @@ const products = [
   {
     id: "7",
     name: "Air Jordan Retro 1 Low Black White Grey",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 3,
     price: '46.200',
     image: '../componentes/images/95-lowblackwhitegrey.jpeg',
@@ -81,7 +81,7 @@ const products = [
   {
     id: "8",
     name: "Air Jordan Retro 1 Low Black Toe",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 4,
     price: '57.750',
     image: '../componentes/images/102-lowblacktoe.jpeg',
@@ -90,7 +90,7 @@ const products = [
   {
     id: "9",
     name: "Air Jordan 1 Low Wolf Grey",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 2,
     price: '60.893',
     image: '../componentes/images/141-lowwolfgrey.jpeg',
@@ -99,7 +99,7 @@ const products = [
   {
     id: "10",
     name: "Air Jordan 1 Mid Very Berry",
-    category: "zapatillas",
+    categoria: "zapatillas",
     stock: 5,
     price: '46.200',
     image: '../componentes/images/165-midveryberry.jpeg',
@@ -108,7 +108,7 @@ const products = [
   {
     id: "11",
     name: "Nike Big Swoosh Jacket",
-    category: "ropa",
+    categoria: "ropa",
     stock: 3,
     price: '46.200',
     image: '../componentes/images/1-bigswooshjacket.jpg',
@@ -117,7 +117,7 @@ const products = [
   {
     id: "12",
     name: "Bape 1st Camo Beach Short Side Shark Army Green",
-    category: "ropa",
+    categoria: "ropa",
     stock: 1,
     price: '73.491',
     image: '../componentes/images/6-shortsgreenarmy.jpeg',
@@ -126,7 +126,7 @@ const products = [
   {
     id: "13",
     name: "Jordan Jumpman Dry Air Mesh GFX Short",
-    category: "ropa",
+    categoria: "ropa",
     stock: 2,
     price: '15.750',
     image: '../componentes/images/217-gfxshortwhite.jpeg',
@@ -135,7 +135,7 @@ const products = [
   {
     id: "14",
     name: "Anti Social Social Club X Playboy Remix Tee Black",
-    category: "ropa",
+    categoria: "ropa",
     stock: 4,
     price: '16.799',
     image: '../componentes/images/3-playboyteeremix.jpeg',
@@ -144,7 +144,7 @@ const products = [
   {
     id: "15",
     name: "Anti Social Social Club X NeighborHood 6ix Black Hoodie Black",
-    category: "ropa",
+    categoria: "ropa",
     stock: 3,
     price: '35.696',
     image: '../componentes/images/10-6ixhoodieblack.jpeg',

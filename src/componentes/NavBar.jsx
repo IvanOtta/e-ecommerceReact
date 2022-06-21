@@ -4,14 +4,14 @@ import CartWidget from "./CartWidget";
 
 function NavBar() {
 
-  const {cantidadTotal} = useCartContext()
+  const {totalQuantity, cartList} = useCartContext()
   
   return (
     <header>
       <nav>
         <ul>
           <Link to="/" className="link-home">
-            <li>Home</li>
+            <li>Inicio</li>
           </Link>
 
           <Link to="/categoria/zapatillas" className="link-zapatillas" >
@@ -23,16 +23,16 @@ function NavBar() {
           </Link>
 
           <Link to ="/cart" className="link-cart">
-          <li>Cart</li>
+          <li>Carrito</li>
           </Link>
-          <div className="cart-n-cant">
+          <div className="cart-n-qnty">
         <Link to='/cart'>
           <span>
             <CartWidget />
           </span>
         </Link>
-          <span className="cantidad-prod" >
-            {cantidadTotal() !== 0 && cantidadTotal()}
+          <span className={cartList.length === 0 ? '' : "qntyidad-prod"} >
+            {totalQuantity() !== 0 && totalQuantity()}
           </span>
 
           </div>

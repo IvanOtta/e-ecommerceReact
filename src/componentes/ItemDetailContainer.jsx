@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-import Loader2 from "./Loader2";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loader2 from "./Loader2";
+import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
   const [loading, setLoading] = useState(true);
-  const [producto, setProduct] = useState({});
+  const [product, setProduct] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,7 +22,7 @@ function ItemDetailContainer() {
   }, [id])
 
   return (
-    <div>{loading ? <Loader2 /> : <ItemDetail producto={producto} />}</div>
+    <div>{loading ? <Loader2 /> : <ItemDetail product={product} />}</div>
   );
 }
 export default ItemDetailContainer;

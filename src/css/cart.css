@@ -35,7 +35,7 @@
     color: rgb(43, 221, 43);
     
 }
-.carritoVacio{
+.emptyCart{
     display: flex;
     justify-content: center;
     flex-direction: column;

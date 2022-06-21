@@ -7,7 +7,7 @@ import "../css/cart.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Cart() {
-  const { cartList, clearCart, clearItem, precioTotal, aumentarCantidad } = useCartContext();
+  const { cartList, clearCart, clearItem, totalPrice } = useCartContext();
   
   return (
     <div className="cart-container">
@@ -20,14 +20,13 @@ export default function Cart() {
             </Link>
             <p> {product.name} </p>
             <p> Precio: ${product.price} </p>
-            <p> Cantidad: {product.cant} </p>
-            <span onClick={() => aumentarCantidad }> + </span>
+            <p> Cantidad: {product.qnty} </p>
                <span onClick={() => clearItem(product.id)} > <BsFillTrashFill className="trash"/> </span> 
           </li>
          ))}
          {cartList.length ? (
            <div className="total-delete-btn">
-            <h3 className="totalprice">Total: <span className="price"> ${precioTotal} </span></h3> 
+            <h3 className="totalprice">Total: <span className="price"> ${totalPrice} </span></h3> 
             <button className="delete-button btn btn-outline-danger" onClick={clearCart}>
               Vaciar Carrito
             </button>
@@ -40,7 +39,7 @@ export default function Cart() {
           </button>
           </Link>
           </div>) : (
-          <div className="carritoVacio">
+          <div className="emptyCart">
             <div className="alert-cart-empty">
             <CgDanger color={"red"} fontSize={'2rem'}/>
             <p style={{fontFamily: 'roboto'}}>No hay productos en tu carrito</p>

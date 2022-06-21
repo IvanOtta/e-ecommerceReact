@@ -11,9 +11,9 @@ export default function CartContextProvider({ children }) {
     let i = cartList.findIndex((prod) => prod.id === item.id);
 
     if (i !== -1) {
-      const quant1 = cartList[i].cant;
+      const quant1 = cartList[i].qnty;
 
-      cartList[i].cant = quant1 + item.cant;
+      cartList[i].qnty = quant1 + item.qnty;
 
       setCartList([...cartList]);
     } else {
@@ -32,11 +32,11 @@ export default function CartContextProvider({ children }) {
     setCartList([...newCart]);
   };
 
-  const cantidadTotal = () => {
-    return cartList.reduce((counter, prod) => (counter += prod.cant), 0);
+  const totalQuantity = () => {
+    return cartList.reduce((counter, prod) => (counter += prod.qnty), 0);
   };
-  const precioTotal = cartList.reduce(
-    (acc, item) => acc + parseFloat(item.price) * item.cant,
+  const totalPrice = cartList.reduce(
+    (acc, item) => acc + parseFloat(item.price) * item.qnty,
     0
   );
 
@@ -47,8 +47,8 @@ export default function CartContextProvider({ children }) {
         addToCart,
         clearCart,
         clearItem,
-        cantidadTotal,
-        precioTotal,
+        totalQuantity,
+        totalPrice,
       }}
     >
       {children}

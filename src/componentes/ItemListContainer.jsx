@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import ItemList from "./ItemList";
 import { Ring } from "@uiball/loaders";
 import { useParams } from "react-router-dom";
 import {getFirestore, collection, getDocs,} from "firebase/firestore";
+import ItemList from "./ItemList";
 
 <Ring
   size={40}

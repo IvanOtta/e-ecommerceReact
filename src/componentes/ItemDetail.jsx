@@ -5,7 +5,7 @@ import { useCartContext } from "../Context/cartContext";
 
 
 
-export default function ItemDetail({ producto }) {
+export default function ItemDetail({ product }) {
   const [inputType, setInputType] = useState("button");
   
   const {addToCart} = useCartContext()
@@ -16,20 +16,20 @@ export default function ItemDetail({ producto }) {
   };
 
 
-  function onAdd(cant) {
-    addToCart({...producto, cant})
+  function onAdd(qnty) {
+    addToCart({...product, qnty})
   }
 
   return (
     <div className="itemDetailContainer">
       <div className="detailImage">
-        <img src={producto.image} />
+        <img src={product.image} />
       </div>
       <div className="detailInfo">
-        <h2> {producto.name} </h2>
-        <p> {producto.price} </p>
+        <h2> {product.name} </h2>
+        <p> ${product.price} </p>
         {
-          inputType === 'button' ? <ItemCount stock={producto.stock} initial={1} onAdd={onAdd} handleInput={handleInput}/>
+          inputType === 'button' ? <ItemCount stock={product.stock} initial={1} onAdd={onAdd} handleInput={handleInput}/>
           :
           <Navigator/>          
           

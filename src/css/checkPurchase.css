@@ -25,16 +25,21 @@ form{
 
 form input{
     padding: 5px;
+    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+form input:focus{
+    border-color: rgb(37, 124, 255);
+    outline: rgba(21, 255, 0, 0.411);
+}
+
 input::placeholder{
     font-family: roboto;
     display: flex;
     text-align: center;
-    letter-spacing: 2.3px;
 }
 
