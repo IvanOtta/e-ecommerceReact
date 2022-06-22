@@ -1,7 +1,6 @@
-import ItemCount from "./ItemCount";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import {Link} from 'react-router-dom'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function Item({ name, image, stock, id }) {
   return (

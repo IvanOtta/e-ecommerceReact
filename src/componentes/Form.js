@@ -1,7 +1,7 @@
-import Swal from 'sweetalert2'
 import {useState} from 'react'
 import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from 'firebase/firestore'
 import { useCartContext } from '../Context/cartContext'
+import Swal from 'sweetalert2'
 import '../css/checkPurchase.css'
 
 

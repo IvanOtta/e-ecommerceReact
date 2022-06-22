@@ -11,7 +11,7 @@ export default function Cart() {
   
   return (
     <div className="cart-container">
-      {cartList.length === 0 ? '' : <h2 className="cartTitle"> Finalizá tu Compra </h2>  }
+      {cartList.length === 0 ? '' : <h2 className="cartTitle" style={{color:'orange'}}> Finalizá tu Compra </h2>  }
       <div className="cart">
             {cartList.map((product) => (
           <li key={product.id} className="cartItem">
@@ -27,19 +27,19 @@ export default function Cart() {
          {cartList.length ? (
            <div className="total-delete-btn">
             <h3 className="totalprice">Total: <span className="price"> ${totalPrice} </span></h3> 
-            <button className="delete-button btn btn-outline-danger" onClick={clearCart}>
+            <button className="delete-button btn btn-danger" onClick={clearCart}>
               Vaciar Carrito
             </button>
           <Link to={'/'} >
-            <button className="btn btn-outline-info">Seguir Comprando</button>
+            <button className="btn btn-info">Seguir Comprando</button>
           </Link>
           <Link to={'/Comprar'} >
-          <button className="btn btn-outline-success">
+          <button className="btn btn-success">
             Realizar Compra
           </button>
           </Link>
           </div>) : (
-          <div className="emptyCart">
+          <div className="carritoVacio">
             <div className="alert-cart-empty">
             <CgDanger color={"red"} fontSize={'2rem'}/>
             <p style={{fontFamily: 'roboto'}}>No hay productos en tu carrito</p>
