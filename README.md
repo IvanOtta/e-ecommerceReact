@@ -6,7 +6,7 @@
  
 
 ## Descripción
-#####  Es una e-ecomerce dedicado a "Indumentaria", Inicio: se encuentran todos los productos tanto Zapatillas como Ropa, cada producto tiene su boton "Ver Detalle", donde los dirige a cada producto con su contador para agregar cantidad del producto seleccionado, NavBar: estan las categorias Zapatillas/Ropa y el carrito donde se almacenan los productos seleccionados, donde se puede borrar la lista del carrito, cada producto tiene su boton para eliminar ese producto solo, y por ultimo el boton "Realizar Compra" donde te dirige al formulario para poner los datos del cliente, al completar el formulario se crea la orden con el ID de la compra.  
+#####  Es una e-ecomerce dedicado a "Indumentaria", Inicio: se encuentran todos los productos tanto Zapatillas como Ropa, cada producto tiene su boton "Ver Detalle", donde los dirige a cada producto con su contador para agregar cantidad del producto seleccionado, NavBar: estan las categorias Zapatillas/Ropa y el carrito donde se almacenan los productos seleccionados, donde se puede borrar la lista del carrito, cada producto tiene su boton para eliminar ese producto solo, y por ultimo el boton "Realizar Compra" donde te dirige al formulario para poner los datos del cliente, al completar el formulario se crea la orden con el ID de la compra e resta la cantidad de los productos seleccionados.  
 
 # ``Material usado ``
 - `` React 'version 18.0.0' ``
@@ -17,3 +17,6 @@
 - `` Sweet Alert2 'version 11.4.17' ``
 - `` Firebase 'version 9.8.1' ``
 - `` Loaders.css 'version 0.1.2' ``
+
+ # ``Deployed``: ``Netlify``:  
+ #### ````https://meek-sunburst-ef5b84.netlify.app/````
