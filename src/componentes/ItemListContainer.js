@@ -23,7 +23,6 @@ function ItemListContainer() {
               .map((item) => ({ id: item.id, ...item.data() }))
               .filter((prods) => prods.categoria === id)
           )
-        
         )
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
@@ -31,18 +30,33 @@ function ItemListContainer() {
       getDocs(QueryCollection)
         .then((resp) =>
           setProducts(
-            resp.docs.map((item) => ({ id: item.id, ...item.data() })))   
+            resp.docs.map((item) => ({ id: item.id, ...item.data() }))
+          )
         )
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
   }, [id]);
-  
+
+  // const [search, setSearch] = useState('')
+
+
+  // const searcher = (e) => {
+  // let results = products.filter((prod) => prod.name.toLowerCase().includes(e.target.value))
+  // setSearch(results)    
+  // }
+
+  // console.log(search)
+
   return (
     <div>
+      <input className="form-control"  type='text' placeholder="Busqueda" />
       <div className="bienvenida">
         {loading ? <Ring color={"red"} /> : <ItemList products={products} />}
       </div>
+
+      {/* { !search ? products : products.filter((data) => data.name.toLowerCase(search)} */}
+    
     </div>
   );
 }
